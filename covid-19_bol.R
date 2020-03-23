@@ -105,14 +105,14 @@ LP = 1
 OR = 8
 PT = 0
 TA = 0
-SC = 13
+SC = 15
 CH = 0
 PA = 0
 BE = 0
-CB = 2
+CB = 3
 
 cases <- c(LP,OR,PT,TA,SC,CH,PA,BE,CB)
-name <- c("La Paz","Oruro","Potosí","Tarija","Santa Cruz","Chuquisaca","Pando","El Beni","Cochabamba")
+name <- c("La Paz","Oruro","PotosÃ­","Tarija","Santa Cruz","Chuquisaca","Pando","El Beni","Cochabamba")
 cov <- data.frame(name,cases)
 
 # map
