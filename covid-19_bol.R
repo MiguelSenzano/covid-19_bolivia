@@ -99,7 +99,7 @@ covid.evol
 
 # Por departamentos----
 
-# Casos reportados
+# Casos reportados (fuente: https://www.boliviasegura.gob.bo/datos-oficiales/)
 
 LP = 1
 OR = 8
