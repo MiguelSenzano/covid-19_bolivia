@@ -5,7 +5,7 @@
 # Biologo, Departamento de Zoologia,
 # Universidade Estadual Paulista - UNESP, SP, Brazil
 # e-mail: luismiguelsenzanocastro@gmail.com
-# ultima modificacion: 22/03/2020
+# ultima modificacion: 26/03/2020
 # ----
 
 
@@ -26,13 +26,13 @@ require(ggpubr)
 
 # reportes diarios----
 
-# reportes actualizados diariamente de: European Centre for Disease Prevention and Control (https://adv-r.hadley.nz/subsetting.html)
+# reportes actualizados diariamente de: European Centre for Disease Prevention and Control (https://www.ecdc.europa.eu/en)
 
 url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",format(Sys.time(), "%Y-%m-%d"), ".xlsx", sep = "")
 
 # Obtener el dataset
 
-httr::GET(url, authenticate(":", ":", type="ntlm"), write_disk(df_covid <- file.path(fileext = "covid.xlsx")))
+httr::GET(url, authenticate(":", ":", type="ntlm"), write_disk(df_covid <- file.path(fileext = "covid.xlsx"),overwrite=TRUE))
 
 covid <- read_excel(df_covid)
 names(covid) <- gsub(" ", "_", names(covid))
@@ -101,11 +101,11 @@ covid.evol
 
 # Casos reportados (fuente: https://www.boliviasegura.gob.bo/datos-oficiales/)
 
-LP = 1
+LP = 4
 OR = 8
 PT = 0
 TA = 0
-SC = 15
+SC = 24
 CH = 0
 PA = 0
 BE = 0
