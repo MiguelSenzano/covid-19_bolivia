@@ -5,7 +5,7 @@
 # Biologo, Departamento de Zoologia,
 # Universidade Estadual Paulista - UNESP, SP, Brazil
 # e-mail: luismiguelsenzanocastro@gmail.com
-# ultima modificacion: 26/03/2020
+# ultima modificacion: 05/04/2020
 # ----
 
 
@@ -101,15 +101,15 @@ covid.evol
 
 # Casos reportados (fuente: https://www.boliviasegura.gob.bo/datos-oficiales/)
 
-LP = 4
+LP = 23
 OR = 8
-PT = 0
-TA = 0
-SC = 24
-CH = 0
-PA = 0
+PT = 5
+TA = 1
+SC = 88
+CH = 1
+PA = 6
 BE = 0
-CB = 3
+CB = 25
 
 cases <- c(LP,OR,PT,TA,SC,CH,PA,BE,CB)
 name <- c("La Paz","Oruro","Potosí","Tarija","Santa Cruz","Chuquisaca","Pando","El Beni","Cochabamba")
@@ -150,3 +150,60 @@ g_covid <- ggarrange(map, labels="Casos confirmados por departamento",
                      nrow = 1, align = "h")
 
 annotate_figure(g_covid)
+
+
+# Evolution temporal interactiva----
+
+cov_dpto <- read.delim("cov_depto.txt", sep = "\t", header = TRUE)
+cov_formatted <- cov_dpto %>%
+  group_by(day) %>%
+  mutate(rank = rank(-value)) %>%
+  group_by(dpto_name) %>% 
+  ungroup()
+
+# plot
+
+staticplot = ggplot(cov_formatted, aes(rank, group = dpto_name, 
+                                       fill = as.factor(dpto_name), color = as.factor(dpto_name))) +
+  geom_tile(aes(y = value/2,
+                height = value,
+                width = 0.9), alpha = 0.8, color = NA) +
+  geom_text(aes(y = 0, label = paste(dpto_name, " ")), vjust = 0.2, hjust = 1, size = 6) +
+  geom_text(aes(y=value, label = paste(value, " "), hjust=0), size = 6.5) +
+  coord_flip(clip = "off", expand = FALSE) +
+  scale_y_continuous(labels = scales::comma) +
+  scale_x_reverse() +
+  guides(color = FALSE, fill = FALSE) +
+  theme(axis.line=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks=element_blank(),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank(),
+        legend.position="none",
+        panel.background=element_blank(),
+        panel.border=element_blank(),
+        panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank(),
+        panel.grid.major.x = element_line( size=.1, color="grey" ),
+        panel.grid.minor.x = element_line( size=.1, color="grey" ),
+        plot.title=element_text(size=27, hjust=0.5, face="bold", colour="grey40", vjust=-1),
+        plot.subtitle=element_text(size=20, hjust=0.5, face="italic", color="grey40"),
+        plot.caption =element_text(size=15, hjust=0.5, face="italic", color="grey40"),
+        plot.background=element_blank(),
+        plot.margin = margin(2,2, 2, 4, "cm"))
+
+# interactive
+
+anim = staticplot + transition_states(day, transition_length = 4, state_length = 1) +
+  view_follow(fixed_x = TRUE)  +
+  labs(title = 'Cov-19 por Fecha : {closest_state}',  
+       subtitle  =  "Casos por departamentos",
+       caption  = "casos confirmados | compilados de: Bolivia Segura (www.boliviasegura.gob.bo/datos-oficiales/)")
+
+# export (GIF)
+
+animate(anim, 200, fps = 20,  width = 1200, height = 1000, 
+        renderer = gifski_renderer("CovDpto.gif"))
+
+##--- fin
