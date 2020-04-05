@@ -1,0 +1,100 @@
+dpto_name	dpto_code	day	value
+La Paz	LPaz	18-03-2020	1
+Oruro	Oruro	18-03-2020	8
+Potosi	Potosi	18-03-2020	0
+Tarija	Tarija	18-03-2020	0
+Santa Cruz	StaCruz	18-03-2020	13
+Chuquisaca	Chuquisaca	18-03-2020	1
+Pando	Pando	18-03-2020	0
+Beni	Beni	18-03-2020	0
+Cochabamba	Cbba	18-03-2020	1
+La Paz	LPaz	22-03-2020	4
+Oruro	Oruro	22-03-2020	8
+Potosi	Potosi	22-03-2020	0
+Tarija	Tarija	22-03-2020	0
+Santa Cruz	StaCruz	22-03-2020	24
+Chuquisaca	Chuquisaca	22-03-2020	0
+Pando	Pando	22-03-2020	0
+Beni	Beni	22-03-2020	0
+Cochabamba	Cbba	22-03-2020	3
+La Paz	LPaz	28-03-2020	8
+Oruro	Oruro	28-03-2020	8
+Potosi	Potosi	28-03-2020	1
+Tarija	Tarija	28-03-2020	0
+Santa Cruz	StaCruz	28-03-2020	42
+Chuquisaca	Chuquisaca	28-03-2020	1
+Pando	Pando	28-03-2020	0
+Beni	Beni	28-03-2020	0
+Cochabamba	Cbba	28-03-2020	14
+La Paz	LPaz	29-03-2020	10
+Oruro	Oruro	29-03-2020	8
+Potosi	Potosi	29-03-2020	3
+Tarija	Tarija	29-03-2020	0
+Santa Cruz	StaCruz	29-03-2020	44
+Chuquisaca	Chuquisaca	29-03-2020	1
+Pando	Pando	29-03-2020	1
+Beni	Beni	29-03-2020	0
+Cochabamba	Cbba	29-03-2020	14
+La Paz	LPaz	30-03-2020	13
+Oruro	Oruro	30-03-2020	8
+Potosi	Potosi	30-03-2020	3
+Tarija	Tarija	30-03-2020	0
+Santa Cruz	StaCruz	30-03-2020	52
+Chuquisaca	Chuquisaca	30-03-2020	1
+Pando	Pando	30-03-2020	1
+Beni	Beni	30-03-2020	0
+Cochabamba	Cbba	30-03-2020	18
+La Paz	LPaz	31-03-2020	14
+Oruro	Oruro	31-03-2020	8
+Potosi	Potosi	31-03-2020	3
+Tarija	Tarija	31-03-2020	1
+Santa Cruz	StaCruz	31-03-2020	59
+Chuquisaca	Chuquisaca	31-03-2020	1
+Pando	Pando	31-03-2020	1
+Beni	Beni	31-03-2020	0
+Cochabamba	Cbba	31-03-2020	20
+La Paz	LPaz	01-4-2020	16
+Oruro	Oruro	01-4-2020	8
+Potosi	Potosi	01-4-2020	4
+Tarija	Tarija	01-4-2020	1
+Santa Cruz	StaCruz	01-4-2020	64
+Chuquisaca	Chuquisaca	01-4-2020	1
+Pando	Pando	01-4-2020	1
+Beni	Beni	01-4-2020	0
+Cochabamba	Cbba	01-4-2020	20
+La Paz	LPaz	02-4-2020	16
+Oruro	Oruro	02-4-2020	8
+Potosi	Potosi	02-4-2020	4
+Tarija	Tarija	02-4-2020	1
+Santa Cruz	StaCruz	02-4-2020	68
+Chuquisaca	Chuquisaca	02-4-2020	1
+Pando	Pando	02-4-2020	4
+Beni	Beni	02-4-2020	0
+Cochabamba	Cbba	02-4-2020	21
+La Paz	LPaz	03-4-2020	19
+Oruro	Oruro	03-4-2020	8
+Potosi	Potosi	03-4-2020	5
+Tarija	Tarija	03-4-2020	1
+Santa Cruz	StaCruz	03-4-2020	70
+Chuquisaca	Chuquisaca	03-4-2020	1
+Pando	Pando	03-4-2020	6
+Beni	Beni	03-4-2020	0
+Cochabamba	Cbba	03-4-2020	22
+La Paz	LPaz	04-4-2020	20
+Oruro	Oruro	04-4-2020	8
+Potosi	Potosi	04-4-2020	5
+Tarija	Tarija	04-4-2020	1
+Santa Cruz	StaCruz	04-4-2020	74
+Chuquisaca	Chuquisaca	04-4-2020	1
+Pando	Pando	04-4-2020	6
+Beni	Beni	04-4-2020	0
+Cochabamba	Cbba	04-4-2020	24
+La Paz	LPaz	05-4-2020	23
+Oruro	Oruro	05-4-2020	8
+Potosi	Potosi	05-4-2020	5
+Tarija	Tarija	05-4-2020	1
+Santa Cruz	StaCruz	05-4-2020	88
+Chuquisaca	Chuquisaca	05-4-2020	1
+Pando	Pando	05-4-2020	6
+Beni	Beni	05-4-2020	0
+Cochabamba	Cbba	05-4-2020	25
