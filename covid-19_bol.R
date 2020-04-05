@@ -23,6 +23,9 @@ require(shadowtext)
 require(rnaturalearth)
 require(RColorBrewer)
 require(ggpubr)
+library(gganimate)
+library(janitor)
+library(gifski)
 
 # reportes diarios----
 
