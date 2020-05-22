@@ -74,7 +74,7 @@ d = y['global'] %>%
   mutate(days_since_0 = as.numeric(time - min(time))) %>%
   ungroup
 
-breaks=c(0, 10, 20, 30, 40, 50, 100, 200, 300, 400)
+breaks=c(0, 100, 200, 300, 400, 500, 1000, 2000, 3000, 4000, 5000)
 
 covid.evol <- ggplot(d, aes(days_since_0, confirm, color = country)) +
   geom_smooth(color='grey50', linetype='dashed') +
@@ -104,15 +104,15 @@ covid.evol
 
 # Casos reportados (fuente: https://www.boliviasegura.gob.bo/datos-oficiales/)
 
-LP = 23
-OR = 8
-PT = 5
-TA = 1
-SC = 88
-CH = 1
-PA = 6
-BE = 0
-CB = 25
+LP = 363
+OR = 138
+PT = 40
+TA = 14
+SC = 3241
+CH = 19
+PA = 12
+BE = 833
+CB = 259
 
 cases <- c(LP,OR,PT,TA,SC,CH,PA,BE,CB)
 name <- c("La Paz","Oruro","Potosí","Tarija","Santa Cruz","Chuquisaca","Pando","El Beni","Cochabamba")
