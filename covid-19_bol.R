@@ -209,4 +209,4 @@ anim = staticplot + transition_states(day, transition_length = 4, state_length =
 animate(anim, 200, fps = 20,  width = 1200, height = 1000, 
         renderer = gifski_renderer("CovDpto.gif"))
 
-##--- fin
+##---- fin
